@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v5.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v5.0": {
+      "Notatnik.NET/1.0.0": {
+        "runtime": {
+          "Notatnik.NET.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Notatnik.NET/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

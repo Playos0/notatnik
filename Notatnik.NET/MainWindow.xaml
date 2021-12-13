@@ -1,0 +1,93 @@
+﻿<Window x:Class="Notatnik.NET.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Notatnik.NET"
+        mc:Ignorable="d"
+        Title="Notatnik.NET" Height="350" Width="525">
+    <Window.Resources>
+        <Image x:Key="IkonaNowy" x:Shared="False" Source="img/new_file.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaOpen" x:Shared="False" Source="img/open.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaSave" x:Shared="False" Source="img/save.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaSaveAs" x:Shared="False" Source="img/save_as.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaPrint" x:Shared="False" Source="img/print.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaClose" x:Shared="False" Source="img/close_file.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaUndo" x:Shared="False" Source="img/undo.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaRepeat" x:Shared="False" Source="img/repeat.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaCut" x:Shared="False" Source="img/cut.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaCopy" x:Shared="False" Source="img/copy.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaPaste" x:Shared="False" Source="img/paste.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaDelete" x:Shared="False" Source="img/delete.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaZaznacz" x:Shared="False" Source="img/edit.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaHour" x:Shared="False" Source="img/clock.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaFont" x:Shared="False" Source="img/font_style.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaColor" x:Shared="False" Source="img/colors.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaNarz" x:Shared="False" Source="img/folder.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaStan" x:Shared="False" Source="img/folder.png" Width="16" Height="16"/>
+        <Image x:Key="IkonaZaw" x:Shared="False" Source="img/repeat.png" Width="16" Height="16"/>
+
+    </Window.Resources>
+    <DockPanel>
+        <Menu IsMainMenu="True" DockPanel.Dock="Top">
+            <MenuItem Header="_Plik">
+                <MenuItem Header="_Nowy" Icon="{StaticResource IkonaNowy}" InputGestureText="Ctrl+R"></MenuItem>
+                <MenuItem Header="_Otworz..." Icon="{StaticResource IkonaOpen}" InputGestureText="Ctrl+O"></MenuItem>
+                <MenuItem Header="Zapi_sz" Icon="{StaticResource IkonaSave}" InputGestureText="Crtl+S"></MenuItem>
+                <MenuItem Header="_Zapisz jako..." Icon="{StaticResource IkonaSaveAs}" ></MenuItem>
+                <Separator/>
+                <MenuItem Header="_Drukuj" Icon="{StaticResource IkonaPrint}" InputGestureText="Ctrl+D"></MenuItem>
+                <Separator/>
+                <MenuItem Header="Za_kończ" Icon="{StaticResource IkonaClose}" InputGestureText="Alt+F4"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Edycja">
+                <MenuItem Header="_Cofnij" Icon="{StaticResource IkonaUndo}" InputGestureText="Ctrl+Z"></MenuItem>
+                <MenuItem Header="_Powtórz" Icon="{StaticResource IkonaRepeat}" InputGestureText="Ctrl+Y"></MenuItem>
+                <Separator/>
+                <MenuItem Header="_Wytnij" Icon="{StaticResource IkonaCut}" InputGestureText="Crtl+X"></MenuItem>
+                <MenuItem Header="_Kopiuj" Icon="{StaticResource IkonaCopy}" InputGestureText="Crtl+C" ></MenuItem>
+                <MenuItem Header="Wkl_ej" Icon="{StaticResource IkonaPaste}" InputGestureText="Crtl+V"></MenuItem>
+                <MenuItem Header="_Usuń" Icon="{StaticResource IkonaDelete}" InputGestureText="Del" ></MenuItem>
+                <Separator/>
+                <MenuItem Header="Zaznacz w_szytstko" Icon="{StaticResource IkonaZaznacz}" InputGestureText="Ctrl+A"></MenuItem>
+                <MenuItem Header="_Godzina/Data" Icon="{StaticResource IkonaHour}" InputGestureText="F5"></MenuItem>
+            </MenuItem>
+            <MenuItem Header="_Widok">
+                <MenuItem Header="_Zawijanie Wierszy" IsCheckable="True" Icon="{StaticResource IkonaZaw}" ></MenuItem>
+                <MenuItem Header="_Czcionka"  Icon="{StaticResource IkonaFont}"></MenuItem>
+                <MenuItem Header="_Kolor tłą" Icon="{StaticResource IkonaColor}" ></MenuItem>
+                <Separator/>
+                <MenuItem Header="Pasek _narzędzi" Icon="{StaticResource IkonaNarz}" IsCheckable="True"></MenuItem>
+                <MenuItem Header="Pasek _stanu" Icon="{StaticResource IkonaStan}" IsCheckable="True"></MenuItem>
+            </MenuItem>
+        </Menu>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button ToolTip="Nowy" Content="{StaticResource IkonaNowy}" />
+                <Button ToolTip="Otwórz" Content="{StaticResource IkonaOpen}" />
+                <Button ToolTip="Zapisz" Content="{StaticResource IkonaSave}" />
+                <Separator/>
+                <Button ToolTip="Drukuj" Content="{StaticResource IkonaPrint}" />
+            </ToolBar>
+            <ToolBar>
+                <Button ToolTip="Cofnij" Content="{StaticResource IkonaUndo}" />
+                <Button ToolTip="Powtórz" Content="{StaticResource IkonaRepeat}" />
+                <Separator/>
+                <Button ToolTip="Wytnij" Content="{StaticResource IkonaCut}" />
+                <Button ToolTip="Kopiuj" Content="{StaticResource IkonaCopy}" />
+                <Button ToolTip="Wklej" Content="{StaticResource IkonaPaste}" />
+                <Button ToolTip="Usuń" Content="{StaticResource IkonaDelete}" />
+            </ToolBar>
+            <ToolBar>
+                <Button ToolTip="Czcionka" Content="{StaticResource IkonaFont}" />
+                <Button ToolTip="Kolor" Content="{StaticResource IkonaColor}" />
+            </ToolBar>
+        </ToolBarTray>
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBox Text="[Brak Pliku]"/>
+            </StatusBarItem>
+        </StatusBar>
+        <TextBox AcceptsReturn="True" TextWrapping="Wrap" ScrollViewer.HorizontalScrollBarVisibility="Auto" ScrollViewer.VerticalScrollBarVisibility="Auto" />
+    </DockPanel>
+</Window>

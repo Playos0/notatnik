@@ -1,0 +1,72 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <UseWPF>true</UseWPF>
+    <ApplicationIcon>1241182.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="img\backcolor.png" />
+    <None Remove="img\clock.png" />
+    <None Remove="img\close_file.png" />
+    <None Remove="img\colors.png" />
+    <None Remove="img\copy.png" />
+    <None Remove="img\copy_from.png" />
+    <None Remove="img\copy_to.png" />
+    <None Remove="img\cut.png" />
+    <None Remove="img\delete.png" />
+    <None Remove="img\edit.png" />
+    <None Remove="img\edit_file.png" />
+    <None Remove="img\folder.png" />
+    <None Remove="img\font_color.png" />
+    <None Remove="img\font_style.png" />
+    <None Remove="img\forecolor.png" />
+    <None Remove="img\new_file.png" />
+    <None Remove="img\open.png" />
+    <None Remove="img\paste.png" />
+    <None Remove="img\paste_from.png" />
+    <None Remove="img\paste_to.png" />
+    <None Remove="img\print.png" />
+    <None Remove="img\redo.png" />
+    <None Remove="img\repeat.png" />
+    <None Remove="img\save.png" />
+    <None Remove="img\save_as.png" />
+    <None Remove="img\trash_empty.png" />
+    <None Remove="img\trash_full.png" />
+    <None Remove="img\undo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="img\backcolor.png" />
+    <Resource Include="img\clock.png" />
+    <Resource Include="img\close_file.png" />
+    <Resource Include="img\colors.png" />
+    <Resource Include="img\copy.png" />
+    <Resource Include="img\copy_from.png" />
+    <Resource Include="img\copy_to.png" />
+    <Resource Include="img\cut.png" />
+    <Resource Include="img\delete.png" />
+    <Resource Include="img\edit.png" />
+    <Resource Include="img\edit_file.png" />
+    <Resource Include="img\folder.png" />
+    <Resource Include="img\font_color.png" />
+    <Resource Include="img\font_style.png" />
+    <Resource Include="img\forecolor.png" />
+    <Resource Include="img\new_file.png" />
+    <Resource Include="img\open.png" />
+    <Resource Include="img\paste.png" />
+    <Resource Include="img\paste_from.png" />
+    <Resource Include="img\paste_to.png" />
+    <Resource Include="img\print.png" />
+    <Resource Include="img\redo.png" />
+    <Resource Include="img\repeat.png" />
+    <Resource Include="img\save.png" />
+    <Resource Include="img\save_as.png" />
+    <Resource Include="img\trash_empty.png" />
+    <Resource Include="img\trash_full.png" />
+    <Resource Include="img\undo.png" />
+  </ItemGroup>
+
+</Project>
